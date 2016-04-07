@@ -62,7 +62,7 @@
 
 	<div class="jumbotron">
         <%= topNews %>
-	</div>
+	</div>--%>
 
 <div class="row">
 <%
