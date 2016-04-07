@@ -1000,7 +1000,7 @@ public class ItemTag extends TagSupport
                                                             }
             						}
             					}
-            					String bsUrl = "http://113.174.172.107:8080/pdf.js/web/viewer.html?file=http://http://113.174.172.107:8080/bitstream/" 
+            					String bsUrl = "http://localhost:8080/pdf.js/web/viewer.html?file=http://http://localhost:8080/dspace/bitstream/" 
             							+ item.getHandle() + "/" 
             							+ bitstreams[k].getSequenceID() + "/"
             							+ "/" + UIUtil.encodeBitstreamName(bitstreams[k].getName(), Constants.DEFAULT_ENCODING);
