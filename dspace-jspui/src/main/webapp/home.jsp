@@ -60,12 +60,12 @@
 
 <dspace:layout locbar="nolink" titlekey="jsp.home.title" feedData="<%= feedData %>">
 <%--<<<<<<< HEAD--%>
-	<%--&lt;%&ndash;<div>&ndash;%&gt;--%>
-		<%--&lt;%&ndash;DEBUG<%= feedData %>&ndash;%&gt;--%>
-	<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-	<%--&lt;%&ndash;<div class="jumbotron">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<%= topNews %>&ndash;%&gt;--%>
-	<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+	<%--<div>--%>
+		<%--DEBUG<%= feedData %>--%>
+	<%--</div>--%>
+	<%--<div class="jumbotron">--%>
+        <%--<%= topNews %>--%>
+	<%--</div>--%>
 <%--=======--%>
 
 	<%--<div class="jumbotron">--%>
@@ -171,7 +171,7 @@ if (submissions != null && submissions.count() > 0)
 if (communities != null && communities.length != 0)
 {
 %>
-	<div class="col-md-4">
+	<div class="col-md-8">
                <h3><fmt:message key="jsp.home.com1"/></h3>
                 <p><fmt:message key="jsp.home.com2"/></p>
 				<div class="list-group">
@@ -180,7 +180,7 @@ if (communities != null && communities.length != 0)
     for (int i = 0; i < communities.length; i++)
     {
 %>
-					<div class="list-group-item row">
+					<div class="list-group-item row remove-margin-15">
 <%
 		Bitstream logo = communities[i].getLogo();
 		if (showLogos && logo != null) { %>
@@ -214,13 +214,13 @@ if (communities != null && communities.length != 0)
 }
 %>
 	<%
-    	int discovery_panel_cols = 8;
-    	int discovery_facet_cols = 4;
+    	int discovery_panel_cols = 4;
+    	int discovery_facet_cols = 12;
     %>
 	<%@ include file="discovery/static-sidebar-facet.jsp" %>
 </div>
 
-<div class="row">
+<div class="">
 	<%@ include file="discovery/static-tagcloud-facet.jsp" %>
 </div>
 
