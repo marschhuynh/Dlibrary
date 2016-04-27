@@ -39,7 +39,7 @@
 </main>
             <%-- Page footer --%>
              <footer class="navbar navbar-inverse navbar-bottom" style="position: relative;">
-             <div id="designedby" class="container text-muted" style="position: absolute;right: 50%;transform: translate(50%,0);margin-top: 1.3%;">
+             <div id="designedby" class="text-muted" style="position: absolute;right: 50%;transform: translate(50%,0);margin-top: 0.8%;">
              <%--<fmt:message key="jsp.layout.footer-default.theme-by"/> <a href="http://www.cineca.it"><img--%>
                                     <%--src="<%= request.getContextPath() %>/image/logo-cineca-small.png"--%>
                                     <%--alt="Logo CINECA" /></a>--%>
