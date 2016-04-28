@@ -335,11 +335,11 @@ public class BrowseListTag extends TagSupport
             }
             else if (!StringUtils.isEmpty(tablewidth))
             {
-                out.println("<table width=\"" + tablewidth + "\" align=\"center\" class=\"table\" summary=\"This table browses all dspace content\">");
+                out.println("<table width=\"" + tablewidth + "\" align=\"center\" class=\"table well\" summary=\"This table browses all dspace content\">");
             }
             else
             {
-                out.println("<table align=\"center\" class=\"table\" summary=\"This table browses all dspace content\">");
+                out.println("<table align=\"center\" class=\"table well\" summary=\"This table browses all dspace content\">");
             }
 
             // Output the table headers

@@ -105,7 +105,7 @@
 
 <%@page import="org.dspace.app.webui.servlet.MyDSpaceServlet"%>
 <dspace:layout locbar="commLink" title="<%= name %>" feedData="<%= feedData %>">
-    <div class="well">
+    <div class="">
     <div class="row"><div class="col-md-8"><h2><%= name %>
 <%
             if(ConfigurationManager.getBooleanProperty("webui.strengths.show"))
@@ -115,8 +115,8 @@
 <%
             }
 %>
-		<small><fmt:message key="jsp.collection-home.heading1"/></small>
-      <a class="statisticsLink btn btn-info" href="<%= request.getContextPath() %>/handle/<%= collection.getHandle() %>/statistics"><fmt:message key="jsp.collection-home.display-statistics"/></a>
+		<%--<small><fmt:message key="jsp.collection-home.heading1"/></small>--%>
+      <%--<a class="statisticsLink btn btn-info" href="<%= request.getContextPath() %>/handle/<%= collection.getHandle() %>/statistics"><fmt:message key="jsp.collection-home.display-statistics"/></a>--%>
       </h2></div>
 <%  if (logo != null) { %>
         <div class="col-md-4">
@@ -132,26 +132,26 @@
   <p class="copyrightText"><%= copyright %></p>
   
   <%-- Browse --%>
-  <div class="panel panel-primary">
-  	<div class="panel-heading">
-        <fmt:message key="jsp.general.browse"/>
-	</div>
-	<div class="panel-body">
-	<%-- Insert the dynamic list of browse options --%>
-<%
-	for (int i = 0; i < bis.length; i++)
-	{
-		String key = "browse.menu." + bis[i].getName();
-%>
-	<form method="get" class="btn-group" action="<%= request.getContextPath() %>/handle/<%= collection.getHandle() %>/browse">
-		<input type="hidden" name="type" value="<%= bis[i].getName() %>"/>
-		<%-- <input type="hidden" name="collection" value="<%= collection.getHandle() %>" /> --%>
-		<input type="submit" class="btn btn-default" name="submit_browse" value="<fmt:message key="<%= key %>"/>"/>
-	</form>
-<%	
-	}
-%>	</div>
-</div>
+  <%--<div class="panel panel-primary">--%>
+  	<%--<div class="panel-heading">--%>
+        <%--<fmt:message key="jsp.general.browse"/>--%>
+	<%--</div>--%>
+	<%--<div class="panel-body">--%>
+	<%--&lt;%&ndash; Insert the dynamic list of browse options &ndash;%&gt;--%>
+<%--<%--%>
+	<%--for (int i = 0; i < bis.length; i++)--%>
+	<%--{--%>
+		<%--String key = "browse.menu." + bis[i].getName();--%>
+<%--%>--%>
+	<%--<form method="get" class="btn-group" action="<%= request.getContextPath() %>/handle/<%= collection.getHandle() %>/browse">--%>
+		<%--<input type="hidden" name="type" value="<%= bis[i].getName() %>"/>--%>
+		<%--&lt;%&ndash; <input type="hidden" name="collection" value="<%= collection.getHandle() %>" /> &ndash;%&gt;--%>
+		<%--<input type="submit" class="btn btn-default" name="submit_browse" value="<fmt:message key="<%= key %>"/>"/>--%>
+	<%--</form>--%>
+<%--<%	--%>
+	<%--}--%>
+<%--%>	</div>--%>
+<%--</div>--%>
 <%  if (submit_button)
     { %>
           <form class="form-group" action="<%= request.getContextPath() %>/submit" method="post">
